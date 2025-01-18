@@ -15,17 +15,27 @@ const quotes = [
 ]
 
 export default function ProfileSection() {
-    const [quote, setQuote] = useState(quotes[0])
+    // Initialize quote based on the server's rendered value (static for hydration)
+    const initialQuoteIndex = new Date().getDate() % quotes.length
+    const [quote, setQuote] = useState(quotes[initialQuoteIndex])
 
+    const [formattedDate, setFormattedDate] = useState('')
+    useEffect(() => {
+        setFormattedDate(format(new Date(), 'd MMMM, yyyy'))
+    }, [])
+
+    // Optionally update quote dynamically after hydration
     useEffect(() => {
         const today = new Date()
         const quoteIndex = today.getDate() % quotes.length
         setQuote(quotes[quoteIndex])
     }, [])
+
     return (
         <section className="relative bg-slate-950 py-16">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row gap-8">
+                    {/* Profile Section */}
                     <div className="md:w-1/2">
                         <div className="bg-white/60 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
                             <div className="p-6">
@@ -50,6 +60,7 @@ export default function ProfileSection() {
                             </div>
                         </div>
                     </div>
+                    {/* Quote Section */}
                     <div className="md:w-1/2">
                         <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
                             <div className="p-6">
@@ -58,7 +69,9 @@ export default function ProfileSection() {
                                         <Quote className="text-blue-500 mr-2" size={24} />
                                         <h3 className="text-xl font-semibold text-gray-800">Quote of the Day</h3>
                                     </div>
-                                    <span className="text-gray-500 text-sm">{format(new Date(), 'MMMM d, yyyy')}</span>
+                                    <span className="text-gray-500 text-sm">
+                                        {formattedDate}
+                                    </span>
                                 </div>
                                 <blockquote className="text-gray-700 italic mb-2">"{quote.text}"</blockquote>
                                 <p className="text-right text-gray-600">- {quote.author}</p>

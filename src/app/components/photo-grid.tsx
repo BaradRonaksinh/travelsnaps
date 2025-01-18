@@ -52,7 +52,7 @@ export default function PhotoGrid({ photos, onLike }: PhotoGridProps) {
           />
           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 flex justify-between items-center">
             <span>{photo.alt}</span>
-            <button
+            {/* <button
               onClick={() => handleLike(photo.id)}
               className="flex items-center space-x-1"
               aria-label={`Like ${photo.alt}`}
@@ -63,7 +63,7 @@ export default function PhotoGrid({ photos, onLike }: PhotoGridProps) {
                 }`}
               />
               <span>{photo.likes}</span>
-            </button>
+            </button> */}
           </div>
         </motion.div>
       ))}

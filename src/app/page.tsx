@@ -4,13 +4,13 @@ import HeroSection from './components/hero-section'
 import ProfileSection from './components/profile-section'
 import PhotoGrid from './components/photo-grid'
 import { getPhotos, likePhoto } from './actions/like-photo'
-import { motion, useSpring, useScroll } from "motion/react"
+// import { motion, useSpring, useScroll } from "motion/react"
 
 export default async function Home() {
   
   const photos = await getPhotos()
 
-  return (
+  return (  
     <Layout>
       <HeroSection />
       <ProfileSection />
