@@ -54,7 +54,7 @@ export default function ProfileSection() {
                                 </div>
                                 <p className="text-gray-700 leading-relaxed">
                                     Passionate travel photographer with a keen eye for capturing the essence of diverse cultures and breathtaking landscapes.
-                                    My journey has taken me across continents, allowing me to share the world's beauty through my lens.
+                                    My journey has taken me across continents, allowing me to share the worlds beauty through my lens.
                                     Join me as I continue to explore and document the wonders our planet has to offer.
                                 </p>
                             </div>
@@ -73,7 +73,7 @@ export default function ProfileSection() {
                                         {formattedDate}
                                     </span>
                                 </div>
-                                <blockquote className="text-gray-700 italic mb-2">"{quote.text}"</blockquote>
+                                <blockquote className="text-gray-700 italic mb-2">&quot;{quote.text}&quot;</blockquote>
                                 <p className="text-right text-gray-600">- {quote.author}</p>
                             </div>
                         </div>

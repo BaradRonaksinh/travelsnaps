@@ -46,7 +46,7 @@ export default function HeroSection() {
       )}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-          Capturing the World's Beauty
+          Capturing the Worlds Beauty
         </h1>
       </div>
     </section>

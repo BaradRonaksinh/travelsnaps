@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 
 // This would typically interact with a database
-let photos = [
+const photos = [
   { id: 1, src: "/travelling/bhaiyu.jpeg", alt: "The best kind of reunion: friends who feel like family. 🌟 #CherishedMoments", likes: 10 },
   { id: 2, src: "/travelling/atal_brij.jpeg", alt: "ridging the gap between the past and present with laughter, memories, and the best kind of friends. #🌉❤️", likes: 15 },
   { id: 3, src: "/travelling/ahemdabad_street.jpeg", alt: "Walking down memory lane, one street at a time. 🌆💫 #StreetVibes", likes: 8 },
