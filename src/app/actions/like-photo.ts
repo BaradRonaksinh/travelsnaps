@@ -20,6 +20,10 @@ const photos = [
   { id: 14, src: "/travelling/st_week.jpeg", alt: "Chasing dreams, breaking limits, and playing with passion. 🏅🔥 #GameOn #SportSpirit", likes: 50 },
   { id: 15, src: "/travelling/thol.jpeg", alt: "See the dream, believe in it, and make it your reality. ✨💫 #DreamBig", likes: 21 },
   { id: 16, src: "/travelling/treditional_fest.jpeg", alt: "Surrounded by laughter, memories, 🌟👫❤️ #SquadGoals", likes: 37 },
+  { id: 17, src: "/travelling/mahakal.jpg", alt: "jay mahakal❤️ #harharmahadev ", likes: 21 },
+  { id: 18, src: "/travelling/pavagadh.jpg", alt: "enjoy  #thrusty", likes: 63 },
+  { id: 19, src: "/travelling/hill_station.jpg", alt: "hmm travel are imp require  #see_the_energy", likes: 33 },
+  { id: 20, src: "/travelling/cave_2.jpg", alt: "magic  #me", likes: 12 },
 ]
 
 export async function likePhoto(id: number) {
